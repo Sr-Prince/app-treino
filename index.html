@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Treino</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#050a07">
+</head>
+<body>
+  <!-- Botões achatados no topo -->
+  <nav id="menu">
+    <button id="menu-treino" class="ativo">Treino</button>
+    <button id="menu-historico">Histórico</button>
+  </nav>
+
+  <input id="titulo-app" class="texto-editavel" type="text" placeholder="Título do app">
+
+  <!-- TELA 1: Treino (o painel de sempre) -->
+  <div id="tela-treino">
+    <div id="cronometro">
+      <div id="tempo">00:00</div>
+      <div id="botoes-tempo">
+        <button data-segundos="60">60s</button>
+        <button data-segundos="90">90s</button>
+        <button data-segundos="120">120s</button>
+      </div>
+      <button id="parar">Parar</button>
+    </div>
+
+    <div id="abas"></div>
+    <section id="treino"></section>
+
+    <button id="salvar-treino">Salvar treino de hoje</button>
+
+    <div id="backup">
+      <h3>Backup</h3>
+      <p id="info-backup"></p>
+      <button id="exportar">Exportar backup</button>
+      <button id="importar">Importar backup</button>
+      <input type="file" id="arquivo-backup" accept=".json,application/json" hidden>
+    </div>
+  </div>
+
+  <!-- TELA 2: Histórico -->
+  <div id="tela-historico" hidden>
+    <h2 class="titulo-tela">Histórico</h2>
+    <div id="lista-historico"></div>
+
+    <!-- Só pra testar. Dá pra apagar depois -->
+    <div id="ferramentas-teste">
+      <p class="aviso">Ferramentas de teste</p>
+      <button id="gerar-exemplos">Gerar dados de exemplo</button>
+      <button id="remover-exemplos">Remover exemplos</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="historico.js"></script>
+</body>
+</html>
